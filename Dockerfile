@@ -1,8 +1,8 @@
 #Build stage
 #Build stage
-FROM mcr.osoft.m/dontnet/sdk:10.0 ASbuild
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /app
-COPY *.csprog ./
+COPY *.csproj ./
 RUN dotnet restore
 COPY . ./
 RUN dotnet publish -c Release -o out
