@@ -1,6 +1,10 @@
 #Build stage
 #Build stage
+
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+=======
+FROM mcr.microsoft.m/dontnet/sdk:10.0 ASbuild
+
 WORKDIR /app
 COPY *.csproj ./
 RUN dotnet restore
