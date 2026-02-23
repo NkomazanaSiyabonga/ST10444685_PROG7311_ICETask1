@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CurriculumVitae")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+264ec24273f22d76ccc3bfc748010867e499c5a5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68f902b1fcedf4c1d1e07871e2542014d2f857e2")]
 [assembly: System.Reflection.AssemblyProductAttribute("CurriculumVitae")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CurriculumVitae")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
