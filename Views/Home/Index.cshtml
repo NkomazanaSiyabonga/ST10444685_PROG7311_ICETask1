@@ -1,0 +1,90 @@
+﻿@model CurriculumVitae.Models.CvViewModel
+
+<section>
+    <h1>@Model.FullName</h1>
+    <h3>@Model.ProfessionalTitle</h3>
+</section>
+
+
+
+<section>
+    <h2>About Me</h2>
+    <p>@Model.AboutMe</p>
+</section>
+
+
+
+<section>
+    <h2>Skills</h2>
+
+    <h4>Languages</h4>
+    <p>@string.Join(", ", Model.ProgrammingLanguages)</p>
+
+    <h4>Frameworks</h4>
+    <p>@string.Join(", ", Model.Frameworks)</p>
+
+    <h4>Tools</h4>
+    <p>@string.Join(", ", Model.Tools)</p>
+
+    <h4>Soft Skills</h4>
+    <p>@string.Join(", ", Model.SoftSkills)</p>
+</section>
+
+
+
+<section>
+    <h2>Projects</h2>
+    @foreach (var project in Model.Projects)
+    {
+        <div>
+            <h4>@project.Name</h4>
+            <p>@project.Description</p>
+            <p><a href="@project.GitHubLink" target="_blank">GitHub Repository</a></p>
+        </div>
+    }
+</section>
+
+
+
+<section>
+    <h2>Education</h2>
+    @foreach (var edu in Model.EducationList)
+    {
+        <div>
+            <h4>@edu.Qualification</h4>
+            <p>@edu.Institution (@edu.Year)</p>
+            <p>@edu.Details</p>
+        </div>
+    }
+</section>
+
+
+
+<section>
+    <h2>Experience</h2>
+    @foreach (var exp in Model.ExperienceList)
+    {
+        <div>
+            <h4>@exp.Role - @exp.Company</h4>
+            <p>@exp.Duration</p>
+            <p>@exp.Description</p>
+        </div>
+    }
+</section>
+
+
+
+<section>
+    <h2>Contact</h2>
+    <p>Email: @Model.Email</p>
+    <div class="contact-buttons">
+        <a class="btn" href="@Model.LinkedInUrl" target="_blank">View LinkedIn Profile</a>
+        <a class="btn" href="@Model.GitHubUrl" target="_blank">View GitHub Profile</a>
+    </div>
+</section>
+
+<section>
+    <h2>References</h2>
+    <p>Available on Request</p>
+    
+</section>
